@@ -18,22 +18,14 @@ const tiempos = [1, 60, 3600]
 
 function evaluar(input){
     if(input.value.length < 1){
-        alert('No se ha ingresado algún valor.')
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "No se ha ingresado algún valor.",
+          });
         return false
     } else {
         return true
-    }
-}
-
-function igualdadNo(selectId1, selectId2) {
-    let sel1 = selectId1.value;
-    let sel2 = selectId2;
-
-    if(sel1 != sel2) {
-        alert('Por favor, selecciona dos Unidades de Medida diferentes')
-        return false;
-    } else {
-        return true;
     }
 }
 
@@ -48,10 +40,12 @@ function calcularMasas() {
             (pesoInput * masas[pesoInicial.selectedIndex] / masas[pesoFinal.selectedIndex]) + " " + pesoFinal.value
         
         } else {
-            alert("Las unidades de peso no pueden ser las mismas.");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Las unidades de medida no pueden ser las mismas.",
+              });
         }
-        
-
     }
 }
 
@@ -65,9 +59,12 @@ function calcularLongitud() {
             document.getElementById('resLongitud').innerText  = inputLongitud.value + " " + lonInicial.value + " a " +
             (lonInput * longitud[lonInicial.selectedIndex] / longitud[lonFinal.selectedIndex]) + " " + lonFinal.value
         } else {
-            alert("Las unidades de peso no pueden ser las mismas.");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Las unidades de medida no pueden ser las mismas.",
+              });
         }
-        
     }
 }
 
@@ -84,10 +81,13 @@ function calcularVelocidad() {
             (velInput * distancia[disInicial.selectedIndex] / distancia[disFinal.selectedIndex] 
             * tiempos[tiempoFinal.selectedIndex] / tiempos[tiempoInicial.selectedIndex]) + " " + disFinal.value + "/" + tiempoFinal.value
         } else {
-            alert("Las unidades de peso no pueden ser las mismas.");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Las unidades de medida no pueden ser las mismas.",
+              });
         }
-        console.log(disFinal.value + disFinal.value + tiempoInicial
-            .value + tiempoFinal.value
+        console.log(disFinal.value + disFinal.value + tiempoInicial.value + tiempoFinal.value
         )
     }
 }
