@@ -13,7 +13,7 @@ body {
     grid-template-rows: 1fr;
     gap: 20px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     background: #363636;
     padding: 20px;
     border-radius: 10px;
@@ -53,6 +53,7 @@ input, select {
     padding: 0.5rem;
     font-size: 16px;
     width: 100%;
+    max-width: 300px;
     border: 1px solid #ffa500;
     border-radius: 5px;
     text-align: center;
@@ -125,25 +126,6 @@ button:hover {
 .apartado button {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-input, select {
-    padding: 0.5rem;
-    margin: auto;
-    max-width: 300px;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.back-button {
-    background-color: #dc3545;
-}
-
-.back-button:hover {
-    background-color: #6e0610;
 }
 
 .cont-apartados {
